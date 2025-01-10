@@ -28,7 +28,7 @@ const Publications = () => {
   ];
 
   return (
-    <div className="publications-container p-6">
+    <div className="publications-container p-10">
       <h1 className="text-2xl font-bold mb-4">Research Publications</h1>
       <ol className="list-decimal pl-6">
         {publications.map((pub, index) => (

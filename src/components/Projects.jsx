@@ -62,6 +62,16 @@ const Projects = () => {
               </p>
             </div>
           </div>
+
+          {/* Card 6 */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="p-6 text-neutral-800">
+              <h3 className="text-xl font-semibold mb-2">Data Analysis of Rainfall Patterns in Mumbai</h3>
+              <p className="mb-4">
+                This project explored rainfall patterns in Mumbai, India, through a collaboration with the Maharashtra Meteorological Department. By diving deep into weather data, we conducted exploratory data analysis (EDA), feature engineering, and data manipulation to uncover meaningful trends and patterns.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>

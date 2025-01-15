@@ -60,7 +60,7 @@ const Projects = () => {
           {/* Card 5 */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="p-6 text-neutral-800">
-              <h3 className="text-xl font-semibold mb-2">Inkspire</h3>
+              <h3 className="text-xl font-semibold mb-2">Inkspire: A Blogging Website</h3>
               <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
               <p className="mb-4">
                 Built a Django-based blogging platform featuring a recommendation engine and NLP functionalities (text summarization, paraphrasing, spell correction, sentiment analysis) for seamless blog creation and sharing.

@@ -46,7 +46,7 @@ const Projects = () => {
           </div>
 
           {/* Card 4 */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+{/*           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="p-6 text-neutral-800">
               <h3 className="text-xl font-semibold mb-2">ASL Recognition with Computer Vision and Deep Learning</h3>
               <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
@@ -54,7 +54,7 @@ const Projects = () => {
                 Implemented a pipeline using SIFT, ORB, FLANN approach to detect and classify American Sign Language alphabets and phrases.
               </p>
             </div>
-          </div>
+          </div> */}
 
           {/* Card 5 */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">

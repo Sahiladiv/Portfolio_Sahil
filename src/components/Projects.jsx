@@ -15,21 +15,32 @@ const Projects = () => {
           {/* Card 1 */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="p-6 text-neutral-800">
-              <h3 className="text-xl font-semibold mb-2">Context-Awareness Neurosymbolic Image Augmentation</h3>
+              <h3 className="text-xl font-semibold mb-2">Context Aware Story Generation</h3>
               <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
               <p className="mb-4">
-                Developing a novel augmentation framework merging symbolic rules and multi-modal representations (CLIP, FILIP, BART) for realistic, context-aware composite images.
+                Engineered an AI-powered story generation system that dynamically creates context-aware narratives and captions. Leveraged symbolic reasoning in combination of ViT transformer and MiniLM sentence transformer to enhance logical consistency to generate narratives by using symbolic rules
               </p>
             </div>
           </div>
 
+          {/* Card 2 - News Article Recommendation Engine */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="p-6 text-neutral-800">
+              <h3 className="text-xl font-semibold mb-2">News Article Recommendation System</h3>
+              <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
+              <p className="mb-4">
+                Developed a Streamlit based news article recommendation engine. Implemented vector embeddings using ChromaDB to store the vector embeddings derived using BERT based MiniLM sentence transformer.
+              </p>
+            </div>
+          </div>
+          
           {/* Card 2 - AI-Powered Research Paper Summarizer */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <div className="p-6 text-neutral-800">
               <h3 className="text-xl font-semibold mb-2">AI-Powered Research Paper Summarizer</h3>
               <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
               <p className="mb-4">
-                Developed a Django-based research paper summarization tool integrating LangChain, PyMuPDF, and pdfminer for efficient text extraction and summarization. Implemented vector embeddings (FAISS) to enable multi-paper comparison for literature review assistance.
+                Developed a Streamlit based research paper summarization tool integrating LangChain, PyMuPDF, and pdfminer for efficient text extraction and summarization. Implemented vector embeddings (FAISS) to enable multi-paper comparison for literature review assistance.
               </p>
             </div>
           </div>

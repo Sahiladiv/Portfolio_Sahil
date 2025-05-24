@@ -34,7 +34,7 @@ const About = () => {
           </p>
 
           <a
-            href="/SahilAdivarekarResume.pdf"
+            href="/Sahil_Adivarekar_Resume.pdf"
             download
             className="inline-block mt-6 px-6 py-3 font-semibold bg-blue-600 text-white rounded hover:bg-blue-700 transition"
           >

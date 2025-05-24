@@ -13,7 +13,7 @@ const Contact = () => {
           📞 Phone: (582) 203-8467
         </p>
         <p className="text-lg md:text-xl">
-          📧 Email: saa6545@psu.edu
+          📧 Email: sahiladivarekar99@gmail.com
         </p>
       </div>
     </section>

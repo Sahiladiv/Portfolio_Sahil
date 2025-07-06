@@ -1,98 +1,96 @@
 import React from "react";
-// Update the paths/names below to match where your images are stored
-import Card1Image from "../assets/PSU_RA.png";
-import Card2Image from "../assets/PSU_TA.png";
-import Card3Image from "../assets/Nexacore_exp3.png";
-import Card4Image from "../assets/Croblaze_exp4.png";
-
-
+// Update the paths below to your actual image assets
+import PSU_RA from "../assets/PSU_RA.png";
+import PSU_TA from "../assets/PSU_TA.png";
+import Croblaze from "../assets/Croblaze_exp4.png";
+import Webminix from "../assets/Webminix_exp.png";
+import TSEC from "../assets/TSEC_exp.png";
+import EasleyDunn from "../assets/EasleyDunn_exp.png";
 
 const Experience = () => {
   return (
     <section id="experience" className="py-16">
-      {/* Outer container with horizontal padding and centered layout */}
       <div className="container mx-auto px-8">
-        {/* Section Title */}
         <div className="text-center mb-8">
-        <h2 className="my-10 text-4xl font-serif text-black text-center mb-8">Experience</h2>
+          <h2 className="my-10 text-4xl font-serif text-black text-center mb-8">
+            Experience
+          </h2>
         </div>
 
-        {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Card 1 */}
+
+          {/* Easley Dunn Productions */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            {/* Image */}
-            <img
-              src={Card1Image}
-              alt="Research Assistant"
-              className="h-48 w-full object-cover"
-            />
-            {/* Card Content */}
+            <img src={EasleyDunn} alt="Easley Dunn" className="h-48 w-full object-cover" />
             <div className="p-6 text-neutral-800">
-              <h3 className="text-xl font-semibold mb-2">Research Assistant, Penn State University</h3>
+              <h3 className="text-xl font-semibold mb-2">AI Systems Engineer, Easley Dunn Productions</h3>
               <p className="mb-4">
-              Conducted pattern analysis of trading data, automated data collection through web scraping, and analyzed electoral trends and voter behavior.
+                Built modular AI systems for an eSports game, enabling strategic decision-making. Collaborated in Agile sprints to deliver optimized behaviors for enhanced gameplay.
               </p>
-              <p className="text-sm font-semibold">
-                Key Skills: Python,  Pandas
-              </p>
+              <p className="text-sm font-semibold">Key Skills: AI Systems, Game Logic, Remote Collaboration</p>
             </div>
           </div>
 
-          {/* Card 2 */}
+          {/* PSU Research Assistant */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              src={Card2Image}
-              alt="Teaching Assistant"
-              className="h-48 w-full object-cover"
-            />
+            <img src={PSU_RA} alt="Research Assistant" className="h-48 w-full object-cover" />
             <div className="p-6 text-neutral-800">
-              <h3 className="text-xl font-semibold mb-2"> Teaching Assistant, Penn State University
-              </h3>
+              <h3 className="text-xl font-semibold mb-2">AI/ML Engineer, Smeal Business School</h3>
               <p className="mb-4">
-              Guided students in courses covering data structures, algorithms, theory of computation, and Python programming, while streamlining grading processes through automation.
+                Analyzed 2M+ ZuluTrade records to identify sentiment-risk patterns, improving profiling by 23% and reducing review time by 40% with MiniLM models.
               </p>
-              <p className="text-sm font-semibold">
-                Key Skills:  Python Algorithms, Automata, SQL
-              </p>
+              <p className="text-sm font-semibold">Key Skills: Python, NLP, MiniLM, Data Analytics</p>
             </div>
           </div>
 
-          {/* Card 3 */}
+          {/* PSU TA */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              src={Card3Image}
-              alt="Software Consultant"
-              className="h-48 w-full object-cover"
-            />
+            <img src={PSU_TA} alt="Teaching Assistant" className="h-48 w-full object-cover" />
             <div className="p-6 text-neutral-800">
-              <h3 className="text-xl font-semibold mb-2">Software Consultant, Nexacore Solutions</h3>
+              <h3 className="text-xl font-semibold mb-2">Teaching Assistant, Penn State University</h3>
               <p className="mb-4">
-              Automated client workflows using Google Apps Script, optimizing operations and boosting efficiency.
+                Mentored students in data structures, algorithms, theory of computation, and Python. Improved grading efficiency via automation tools.
               </p>
-              <p className="text-sm font-semibold">
-                Key Skills: Google App Script
-              </p>
+              <p className="text-sm font-semibold">Key Skills: Python, SQL, Automata, Grading Automation</p>
             </div>
           </div>
 
-           {/* Card 4 */}
-           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <img
-              src={Card4Image}
-              alt="Backend Developer"
-              className="h-48 w-full object-cover"
-            />
+          {/* Webminix */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src={Webminix} alt="Webminix Consulting" className="h-48 w-full object-cover" />
             <div className="p-6 text-neutral-800">
-              <h3 className="text-xl font-semibold mb-2"> Backend Developer, Croblaze
-              </h3>
+              <h3 className="text-xl font-semibold mb-2">ML Engineer, Webminix Consulting</h3>
               <p className="mb-4">
-              Developed secure, scalable APIs for user authentication and payment systems, implementing robust two-factor authentication measures.              </p>
-              <p className="text-sm font-semibold">
-                Key Skills:  Django, Django RESTful API
+                Deployed forecasting and anomaly detection on AWS, reducing latency by 30% and increasing rollout speed by 25% through automated ML pipelines.
               </p>
+              <p className="text-sm font-semibold">Key Skills: AWS, Forecasting, MLOps, Python</p>
             </div>
           </div>
+
+          {/* TSEC Research */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src={TSEC} alt="TSEC Research" className="h-48 w-full object-cover" />
+            <div className="p-6 text-neutral-800">
+              <h3 className="text-xl font-semibold mb-2">ML Researcher, TSEC</h3>
+              <p className="mb-4">
+                Achieved 92% accuracy in rainfall prediction using Random Forest. Enhanced disease detection on 54K+ plant images using CNNs and advanced augmentation.
+              </p>
+              <p className="text-sm font-semibold">Key Skills: Random Forest, CNN, Computer Vision</p>
+            </div>
+          </div>
+
+          {/* Croblaze */}
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <img src={Croblaze} alt="Croblaze" className="h-48 w-full object-cover" />
+            <div className="p-6 text-neutral-800">
+              <h3 className="text-xl font-semibold mb-2">Software Engineer, Croblaze</h3>
+              <p className="mb-4">
+                Built Django APIs for authentication and payment workflows serving 10K+ users. Integrated Stripe & SendGrid to cut workflow friction by 50%.
+              </p>
+              <p className="text-sm font-semibold">Key Skills: Django, REST APIs, Stripe, SendGrid</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

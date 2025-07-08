@@ -1,108 +1,69 @@
 import React from "react";
 
-const Projects = () => {
-  return (
-    <section id="projects" className="py-16">
-      {/* Outer container with horizontal padding and centered layout */}
-      <div className="container mx-auto px-8">
-        {/* Section Title */}
-        <div className="text-center mb-8">
-          <h2 className="my-10 text-4xl font-serif text-black text-center mb-8">Projects</h2>
-        </div>
+const projects = [
+  {
+    title: "MiniVitGPT: Vision-Language Captioning",
+    description:
+      "Built a compact ViT-GPT2 pipeline with prefix-tuning to generate fluent, low-latency image captions on edge devices. Integrated MiniLM embeddings and a knowledge-graph reranker that cut hallucinations by 18%.",
+  },
+  {
+    title: "LeetPrep+: Interview Assistant",
+    description:
+      "Full-stack Django + React platform generating 500+ coding solutions with LangChain/OpenAI. Auto-tags problems, scores difficulty, and cuts candidate prep time by 65%.",
+  },
+  {
+    title: "ResearchMind: AI Research Assistant",
+    description:
+      "Django-based RAG system (LangChain + ChromaDB) that extracts text with PyMuPDF, builds FAISS indices, and answers multi-paper queries — cutting literature-review time by 60%.",
+  },
+  {
+    title: "NeuroScoop: News Recommendation Engine",
+    description:
+      "Serves 200K+ articles via MiniLM embeddings stored in ChromaDB, boosting headline-click relevance accuracy by 30%.",
+  },
+  {
+    title: "TradeMind: RL Stock-Trading Agent",
+    description:
+      "Trained a PPO agent on AAPL price data to issue buy/hold/sell actions, outperforming a buy-and-hold baseline by 12% in risk-adjusted return. Live inference dashboard in Streamlit.",
+  },
+  {
+    title: "Feature Mixing for Plant Disease Detection",
+    description:
+      "Created a feature-based augmentation technique leveraging the Hadamard matrix and SGD to boost model performance in detecting plant diseases using architectures like ResNet-50, VGG-16, and VGG-19.",
+  },
+  {
+    title: "Inkspire: A Dynamic Blogging Website",
+    description:
+      "Built a Django-based blogging platform with NLP features like text summarization, paraphrasing, spell correction, sentiment analysis, and personalized blog recommendations.",
+  },
+];
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Card 1 */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6 text-neutral-800">
-              <h3 className="text-xl font-semibold mb-2">Context Aware Story Generation</h3>
-              <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
-              <p className="mb-4">
-                Engineered an AI-powered story generation system that dynamically creates context-aware narratives and captions. Leveraged symbolic reasoning in combination of ViT transformer and MiniLM sentence transformer to enhance logical consistency to generate narratives by using symbolic rules
-              </p>
-            </div>
-          </div>
+const Projects = () => (
+  <section id="projects" className="py-16">
+    <div className="container mx-auto px-8">
+      <h2 className="my-10 text-4xl font-serif text-black text-center">
+        Projects
+      </h2>
 
-          {/* Card 2 - News Recommendation Engine */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6 text-neutral-800">
-              <h3 className="text-xl font-semibold mb-2">NeuroScoop: News Recommendation System</h3>
-              <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
-              <p className="mb-4">
-                Developed a Streamlit based news article recommendation engine. Implemented vector embeddings using ChromaDB to store the vector embeddings derived using BERT based MiniLM sentence transformer.
-              </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projects.map(({ title, description }, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-lg shadow-lg overflow-hidden"
+          >
+            <div className="p-6 text-neutral-800 h-full flex flex-col">
+              {/* Force uniform height for title + line block */}
+              <div className="min-h-[80px] flex flex-col justify-end">
+                <h3 className="text-xl font-semibold mb-2 leading-snug">{title}</h3>
+                <div className="w-full h-px bg-gray-300 mb-4" />
+              </div>
+              <p className="flex-grow">{description}</p>
             </div>
           </div>
-          
-          {/* Card 2 - AI-Powered Research Paper Summarizer */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6 text-neutral-800">
-              <h3 className="text-xl font-semibold mb-2">ResearchMind: AI Research Assistant</h3>
-              <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
-              <p className="mb-4">
-                Developed a Django based research paper summarization tool integrating LangChain, PyMuPDF, and pdfminer for efficient text extraction and summarization. Implemented vector embeddings (FAISS) to enable multi-paper comparison for literature review assistance.
-              </p>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6 text-neutral-800">
-              <h3 className="text-xl font-semibold mb-2">Feature Mixing with Gradient Descent for Plant Disease Detection</h3>
-              <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
-              <p className="mb-4">
-                Created a feature-based augmentation technique leveraging the Hadamard matrix and SGD to boost model performance in detecting plant diseases using architectures like ResNet-50, VGG-16, and VGG-19.
-              </p>
-            </div>
-          </div>
-
-          {  /*Card 4 */}
-         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6 text-neutral-800">
-              <h3 className="text-xl font-semibold mb-2">ASL Recognition with Computer Vision and Deep Learning</h3>
-              <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
-              <p className="mb-4">
-                Implemented a pipeline using SIFT, ORB, FLANN approach to detect and classify American Sign Language alphabets and phrases.
-              </p>
-            </div>
-          </div>
-
-          {/* Card 5 */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6 text-neutral-800">
-              <h3 className="text-xl font-semibold mb-2">Old Photo Restoration using Auto-encoders</h3>
-              <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
-              <p className="mb-4">
-                Developed an auto-encoder method to remove noise and scratches from vintage photos, enhancing color and resolution for improved image quality.
-              </p>
-            </div>
-          </div>
-
-          {/* Card 6 */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6 text-neutral-800">
-              <h3 className="text-xl font-semibold mb-2">Inkspire: A Dynamic Blogging Website</h3>
-              <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
-              <p className="mb-4">
-                Built a Django-based blogging platform featuring a recommendation engine and NLP functionalities (text summarization, paraphrasing, spell correction, sentiment analysis) for seamless blog creation and sharing.
-              </p>
-            </div>
-          </div>
-
-          {/* Card 7 */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-            <div className="p-6 text-neutral-800">
-              <h3 className="text-xl font-semibold mb-2">Data Analysis of Rainfall Patterns in Mumbai</h3>
-              <div className="w-full h-[1px] bg-gray-300 mb-4"></div>
-              <p className="mb-4">
-                This project explored rainfall patterns in Mumbai, India, through a collaboration with the Maharashtra Meteorological Department. By diving deep into weather data, we conducted exploratory data analysis (EDA), feature engineering, and data manipulation to uncover meaningful trends and patterns.
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default Projects;

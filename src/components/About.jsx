@@ -26,7 +26,8 @@ const About = () => {
             className="text-3xl lg:text-4xl tracking-tight"
             style={{ color: "#002D62" }}
           >
-          ML Engineer/Data Scientist
+           Software Developer | AI/ML Engineer | Data Scientist
+
           </span>
 
           <p className="mt-6 text-base md:text-lg text-gray-700">
@@ -47,7 +48,7 @@ const About = () => {
           <div className="flex justify-center lg:justify-end">
             <img
               src={profilePic}
-              alt="Manali Chaudhari"
+              alt="Sahil Adivarekar"
               className="w-[300px] h-[400px] lg:w-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg"
             />
           </div>

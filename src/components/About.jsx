@@ -1,61 +1,57 @@
 import { ABOUT_CONTENT } from "../constants";
 import profilePic from "../assets/SahilProfile.jpg";
 
-const About = () => {
-  return (
-    <section className="px-4 py-8 lg:px-16 lg:py-12">
-      <div className="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-8">
-        {/* Left Section: Text */}
-        <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <h1
-            className="pb-4 text-4xl md:text-6xl lg:text-7xl tracking-tight"
-            style={{
-              fontFamily: '"Playfair Display", serif',
-              fontWeight: 700,
-            }}
-          >
-            Sahil Adivarekar
-          </h1>
+const About = () => (
+  <section
+    id="about"
+    className="bg-gradient-to-b from-blue-100/40 to-white py-16 px-4 lg:px-20"
+  >
+    {/* ---------- Grid Layout ---------- */}
+    <div className="max-w-7xl mx-auto grid gap-8 lg:gap-10 lg:grid-cols-2 items-center">
+      {/* ───── Left: Text ───── */}
+      <div className="text-left">
+        <h1
+          className="text-5xl lg:text-6xl font-extrabold tracking-tight mb-3"
+          style={{ fontFamily: '"Playfair Display", serif' }}
+        >
+          Sahil Adivarekar
+        </h1>
 
-          <p className="text-lg md:text-xl lg:text-2xl text-neutral-900 mb-4">
-            MS in Computer Science and Engineering at 
-            <br></br>The Pennslyvania State University
+        <h2 className="text-3xl lg:text-4xl font-semibold text-blue-900 mb-6">
+          Software Developer | AI/ML Engineer | Data Scientist
+        </h2>
+
+        <div className="mt-4 text-base md:text-lg text-gray-700 leading-relaxed space-y-1">
+          <p>
+            I’m a versatile engineer with a passion for building intelligent, scalable systems that blend the power of machine learning and software engineering. With a strong foundation in Python, PyTorch, TensorFlow, Hugging Face, and cloud platforms like AWS, I specialize in developing end-to-end AI solutions—from model research to deployment.
           </p>
-
-          <span
-            className="text-3xl lg:text-4xl tracking-tight"
-            style={{ color: "#002D62" }}
-          >
-           Software Developer | AI/ML Engineer | Data Scientist
-
-          </span>
-
-          <p className="mt-6 text-base md:text-lg text-gray-700">
-            {ABOUT_CONTENT}
+          <p>
+            My experience spans multimodal learning, generative AI, NLP, and computer vision. I’ve led projects ranging from autoencoder-based photo restoration to trading bots trained with reinforcement learning, and built smart, search-driven platforms using embeddings and LLMs.
           </p>
-
-          <a
-            href="/Sahil_Adivarekar_Resume.pdf"
-            download
-            className="inline-block mt-6 px-6 py-3 font-semibold bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-          >
-            Download Resume
-          </a>
+          <p>
+            I thrive at the intersection of deep learning and full-stack engineering—designing systems that are not only innovative, but also robust and production-ready. Driven by curiosity and impact, I’m eager to solve real-world problems through AI-powered software, whether it's optimizing decision-making, enhancing user experience, or pushing the boundaries of what machines can understand.
+          </p>
         </div>
 
-        {/* Right Section: Image */}
-        <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
-          <div className="flex justify-center lg:justify-end">
-            <img
-              src={profilePic}
-              alt="Sahil Adivarekar"
-              className="w-[300px] h-[400px] lg:w-[400px] lg:h-[500px] object-cover rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
+        <a
+          href="/Sahil_Adivarekar_Resume.pdf"
+          download
+          className="inline-block mt-8 px-6 py-3 rounded-md bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition"
+        >
+          Download Résumé
+        </a>
       </div>
-    </section>
-  );
-};
+
+      {/* ───── Right: Image ───── */}
+      <div className="flex justify-center lg:justify-end">
+        <img
+          src={profilePic}
+          alt="Sahil Adivarekar"
+          className="w-[280px] h-[380px] lg:w-[360px] lg:h-[480px] object-cover rounded-xl shadow-xl"
+        />
+      </div>
+    </div>
+  </section>
+);
 
 export default About;

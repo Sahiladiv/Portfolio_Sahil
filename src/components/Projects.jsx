@@ -2,14 +2,19 @@ import React from "react";
 
 const projects = [
   {
-    title: "MiniVitGPT: Vision-Language Captioning",
-    description:
-      "Built a compact ViT-GPT2 pipeline with prefix-tuning to generate fluent, low-latency image captions on edge devices. Integrated MiniLM embeddings and a knowledge-graph reranker that cut hallucinations by 18%.",
-  },
-  {
-    title: "LeetPrep+: Interview Assistant",
+    title: "InterviewKit+: AI-Powered Mock Interview Simulator",
     description:
       "Full-stack Django + React platform generating 500+ coding solutions with LangChain/OpenAI. Auto-tags problems, scores difficulty, and cuts candidate prep time by 65%.",
+  },
+  {
+    title: "ThinkInk: AI Blogging & Recommendation Engine",
+    description:
+      "Built a Django-based blogging platform with NLP features like text summarization, paraphrasing, sentiment analysis, and personalized blog recommendations using MiniLM embeddings and ChromaDB.",
+  },
+  {
+    title: "PulseMind: Secure Health Record System",
+    description:
+      "Developed a HIPAA-compliant patient management system using Django, React, and PostgreSQL. Features include visit tracking, doctor-patient history, and secure medical document uploads.",
   },
   {
     title: "ResearchMind: AI Research Assistant",
@@ -25,16 +30,6 @@ const projects = [
     title: "TradeMind: RL Stock-Trading Agent",
     description:
       "Trained a PPO agent on AAPL price data to issue buy/hold/sell actions, outperforming a buy-and-hold baseline by 12% in risk-adjusted return. Live inference dashboard in Streamlit.",
-  },
-  {
-    title: "Feature Mixing for Plant Disease Detection",
-    description:
-      "Created a feature-based augmentation technique leveraging the Hadamard matrix and SGD to boost model performance in detecting plant diseases using architectures like ResNet-50, VGG-16, and VGG-19.",
-  },
-  {
-    title: "Inkspire: A Dynamic Blogging Website",
-    description:
-      "Built a Django-based blogging platform with NLP features like text summarization, paraphrasing, spell correction, sentiment analysis, and personalized blog recommendations.",
   },
 ];
 
@@ -52,7 +47,6 @@ const Projects = () => (
             className="bg-white rounded-lg shadow-lg overflow-hidden"
           >
             <div className="p-6 text-neutral-800 h-full flex flex-col">
-              {/* Force uniform height for title + line block */}
               <div className="min-h-[80px] flex flex-col justify-end">
                 <h3 className="text-xl font-semibold mb-2 leading-snug">{title}</h3>
                 <div className="w-full h-px bg-gray-300 mb-4" />

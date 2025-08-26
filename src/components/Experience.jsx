@@ -16,15 +16,15 @@ const Experience = () => (
         {/* Easley Dunn */}
         <ExperienceCard
           img={Card1Image}
-          title="AI Systems Engineer, Easley Dunn Productions"
-          desc="Designed modular AI agents for an eSports mobile game, implementing strategic behavior logic to enhance player experience. Collaborated remotely in agile sprints with cross-functional teams."
-          skills="Python, Game AI, Agile, Modular Architecture"
+          title="Software Engineer (AI) at Easley Dunn Production Inc"
+          desc="As a Software Engineer at Easley Dunn Production Inc, I focus on building context-aware AI systems in Unity using C# and fuzzy logic. My primary responsibility is engineering adaptive decision-making for in-game agents, optimizing special move execution and reducing decision latency to improve realism. I work closely with game designers in Agile sprints to fine-tune difficulty logic and ensure dynamic challenge adaptation. Additionally, I containerize AI modules with Docker to streamline integration into CI/CD pipelines, enabling scalable testing and deployment while contributing to higher player engagement and retention."
+          skills="Python, C#, Unity, Game AI, Agile, Modular Architecture"
         />
 
         {/* TA - PSU */}
         <ExperienceCard
           img={Card2Image}
-          title="Teaching Assistant, Penn State University"
+          title="Teaching Assistant at Penn State University"
           desc="Guided students in Data Structures, Algorithms, Theory of Computation, and Python. Streamlined grading through automation and supported hands-on learning."
           skills="Python, Algorithms, Automata, SQL"
         />
@@ -32,33 +32,33 @@ const Experience = () => (
         {/* RA - PSU */}
         <ExperienceCard
           img={Card3Image}
-          title="AI/ML Engineer, Smeal Business School"
-          desc="Analyzed 2M+ trade records to extract sentiment-risk signals and built interpretable models, boosting profiling precision by 23% and insight speed by 3×."
-          skills="Python, Pandas, MiniLM, Data Analysis"
+          title="Full Stack Engineer at Penn State Smeal College of Business"
+          desc="In my role as a Full Stack Engineer, I developed ML-powered systems to analyze over two million Zulu trade records. Using Python, Transformers, and PyTorch, I created anomaly detection pipelines with embeddings that helped uncover insights while reducing manual review work. I also designed and deployed Streamlit dashboards that improved stakeholder decision-making by providing clear visualizations and reducing turnaround time. My work emphasized combining machine learning with interactive interfaces to enhance efficiency and accuracy for business analysts."
+          skills="Python, Pandas, MiniLM, Streamlit"
         />
 
         {/* Webminix */}
         <ExperienceCard
           img={Card4Image}
-          title="Software Engineer (ML), Webminix"
-          desc="Developed forecasting and anomaly detection systems on AWS, reducing client latency by 30% and automating model pipelines with 15% accuracy improvement."
+          title="Software Engineer at Webminix"
+          desc="At Webminix, I was responsible for designing, optimizing, and deploying backend services using AWS and containerization technologies. I migrated client services to autoscaled EC2 instances with Lambda triggers, reducing infrastructure costs significantly. I also automated build and release workflows through GitHub CI, bringing down deployment time from forty minutes to under ten. My role required containerizing backend services with Docker, orchestrating them using Kubernetes, and integrating them with ECS for fault-tolerant deployments, ensuring that client systems remained scalable and resilient under production loads."
           skills="Python, AWS, Forecasting, ML Pipelines"
         />
 
         {/* TSEC */}
         <ExperienceCard
           img={Card6Image}
-          title="ML Engineer, TSEC AI Research Lab"
-          desc="Led research on regularization techniques for plant disease detection using ResNet50 and VGG architectures, boosting generalization and model robustness on PlantVillage dataset."
+          title="ML Engineer Intern at University of Mumbai"
+          desc="During my internship as an ML Engineer, I worked on research initiatives in weather forecasting and plant disease detection. I experimented with TensorFlow and Scikit-learn models, achieving high accuracy rates through extensive feature engineering and model evaluation. One of my key contributions was proposing a novel image augmentation technique that improved accuracy in plant disease detection tasks. My work combined applied research with practical experimentation, highlighting the potential of deep learning in agriculture and environmental prediction."
           skills="PyTorch, Deep Learning, ResNet, Image Processing"
         />
 
         {/* Croblaze */}
         <ExperienceCard
           img={Card5Image}
-          title="Backend Developer, Croblaze"
-          desc="Built secure Django APIs and integrated Stripe/SendGrid, supporting 10K+ daily users and improving deployment reliability by 35%."
-          skills="Django, REST APIs, Stripe, SendGrid"
+          title="Software Engineer at Croblaze"
+          desc="As a Software Engineer Intern at Croblaze, I contributed to backend development by implementing secure authentication APIs with Django and MySQL. I developed JWT-based login flows with Two-Factor Authentication to serve over ten thousand users. To further optimize performance, I refined SQL queries, reducing API response latency below 300ms. My responsibilities also included working closely with senior engineers to enhance backend architecture, ensuring that the authentication system was both reliable and secure."
+          skills="Django, REST APIs, MySQL"
         />
       </div>
     </div>

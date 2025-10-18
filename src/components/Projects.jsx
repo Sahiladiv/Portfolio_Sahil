@@ -11,7 +11,7 @@ const projects = [
     title: "Emotion Simulator: Multi-Persona Response Engine",
     description:
       "Built a Streamlit-based agentic simulation engine with LangGraph DAGs and Groq, routing real-world prompts through 50+ AI personas to analyze cultural and emotional variance. Achieved 60% speedup via parallel persona orchestration and monitored coherence using semantic and tone classifiers.",
-    videoUrl: "https://www.loom.com/share/df21f43fe3654f858eb9adddffa659d4?sid=b43f7bcb-d85f-41f0-8da2-d8213481f1bb", // Loom video URL when ready
+    videoUrl: "https://www.loom.com/embed/df21f43fe3654f858eb9adddffa659d4?sid=b43f7bcb-d85f-41f0-8da2-d8213481f1bb", // Loom video URL when ready
   },
   {
     title: "ResearchMind: AI Research Assistant",

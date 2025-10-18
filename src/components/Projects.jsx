@@ -4,14 +4,14 @@ const projects = [
   {
     title: "Chinese Mom Simulator: Emotionally Tuned Persona Agent",
     description:
-      "Fine-tuned Falcon 7B using culturally grounded parenting narratives from Reddit. Deployed via Groq API to simulate real-time emotional responses of Asian mothers in text conversations.",
+      "Fine-tuned Falcon-7B with LoRA adapters to simulate realistic behavior of culturally grounded Asian parent personas for behavior modeling and policy testing. Engineered 6 distinct identities with emotional traits, ensuring ethical safeguards and avoiding stereotypes in generated outputs.",
     videoUrl: "", // Loom video URL when ready
   },
   {
     title: "Emotion Simulator: Multi-Persona Response Engine",
     description:
-      "Built a LangGraph-based simulation engine with 50+ emotionally diverse personas reacting to the same input. Powered by LoRA adapters and fine-grained tone control using Falcon-7B.",
-    videoUrl: "https://www.loom.com/share/df21f43fe3654f858eb9adddffa659d4?sid=c8bad584-7be0-49d5-9a9e-6e4fd7cdacc7", // Loom video URL when ready
+      "Built a Streamlit-based agentic simulation engine with LangGraph DAGs and Groq, routing real-world prompts through 50+ AI personas to analyze cultural and emotional variance. Achieved 60% speedup via parallel persona orchestration and monitored coherence using semantic and tone classifiers.",
+    videoUrl: "https://www.loom.com/share/df21f43fe3654f858eb9adddffa659d4?sid=b43f7bcb-d85f-41f0-8da2-d8213481f1bb", // Loom video URL when ready
   },
   {
     title: "ResearchMind: AI Research Assistant",

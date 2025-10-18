@@ -51,16 +51,31 @@ const experienceData = [
   },
 ];
 
-const ExperienceCard = ({ img, title, desc, skills }) => (
-  <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-    <img src={img} alt={title} className="h-48 w-full object-cover" />
-    <div className="p-6 text-neutral-800">
-      <h3 className="text-xl font-semibold mb-2">{title}</h3>
-      <p className="mb-4">{desc}</p>
-      <p className="text-sm font-semibold">Key Skills: {skills}</p>
+const ExperienceCard = ({ img, title, desc, skills }) => {
+  // Split title into [Role, Company] using " at " or " | " as delimiter
+  let role = title;
+  let company = "";
+  if (title.includes(" at ")) {
+    [role, company] = title.split(" at ");
+  } else if (title.includes(" | ")) {
+    [role, company] = title.split(" | ");
+  }
+
+  return (
+    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+      <img src={img} alt={title} className="h-48 w-full object-cover" />
+      <div className="p-6 text-neutral-800">
+        <h3 className="text-xl font-semibold leading-tight">{role}</h3>
+        <p className="text-sm italic mb-3">{company}</p>
+        <p className="mb-4 text-sm">{desc}</p>
+        <p className="text-sm font-semibold">
+          <span className="font-medium">Tech Stack:</span> {skills}
+        </p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
+
 
 const Experience = () => (
   <section id="experience" className="py-16">

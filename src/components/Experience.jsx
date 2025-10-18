@@ -10,49 +10,66 @@ const experienceData = [
   {
     img: Card1Image,
     title: "AI Systems Engineer Intern at Easley Dunn Production Inc",
-    desc:
-      "As a Software Engineer at Easley Dunn Production Inc, I focus on building context-aware AI systems in Unity using C# and fuzzy logic. My primary responsibility is engineering adaptive decision-making for in-game agents, optimizing special move execution and reducing decision latency to improve realism. I work closely with game designers in Agile sprints to fine-tune difficulty logic and ensure dynamic challenge adaptation. Additionally, I containerize AI modules with Docker to streamline integration into CI/CD pipelines, enabling scalable testing and deployment while contributing to higher player engagement and retention.",
-    skills: "Python, C#, Unity, Game AI, Agile, Modular Architecture",
-  },
-  {
-    img: Card2Image,
-    title: "Learning Assistant at Penn State University",
-    desc:
-      "Guided students in Data Structures, Algorithms, Theory of Computation, and Python. Streamlined grading through automation and supported hands-on learning.",
-    skills: "Python, Algorithms, Automata, SQL",
+    desc: [
+      "Enhanced gameplay realism by 35% through a fuzzy logic system in Unity that dynamically prioritized AI maneuvers (juke, spin, stiff-arm) based on in-game context.",
+      "Analyzed gameplay data to calibrate AI difficulty curves, improving responsiveness and creating adaptive player challenges.",
+      "Streamlined deployment by containerizing AI modules with Docker and integrating into CI/CD pipelines for scalable testing and updates."
+    ],
+    skills: "Python, C#, Unity, Game AI, Docker, CI/CD",
   },
   {
     img: Card3Image,
     title: "AI Engineer Intern at Penn State Smeal College of Business",
-    desc:
-      "In my role as a Full Stack Engineer, I developed ML-powered systems to analyze over two million Zulu trade records. Using Python, Transformers, and PyTorch, I created anomaly detection pipelines with embeddings that helped uncover insights while reducing manual review work. I also designed and deployed Streamlit dashboards that improved stakeholder decision-making by providing clear visualizations and reducing turnaround time.",
-    skills: "Python, Pandas, MiniLM, Streamlit",
+    desc: [
+      "Clustered 2M+ Zulu trade records using MiniLM embeddings and automated outlier detection, reducing manual review workload by 40+ hours monthly.",
+      "Built interactive Streamlit dashboards for trade anomaly visualization, improving decision-making speed by 28% and precision by 16%.",
+      "Validated clustering with cosine similarity and entropy metrics, boosting regulator confidence in audit compliance."
+    ],
+    skills: "Python, Transformers, MiniLM, Streamlit",
   },
   {
     img: Card4Image,
-    title: "Machine Learning Intern at Webminix",
-    desc:
-      "At Webminix, I was responsible for designing, optimizing, and deploying backend services using AWS and containerization technologies. I migrated client services to autoscaled EC2 instances with Lambda triggers, reducing infrastructure costs significantly. I also automated build and release workflows through GitHub CI, bringing down deployment time from forty minutes to under ten.",
-    skills: "Python, AWS, Forecasting, ML Pipelines",
+    title: "ML Engineer Intern at Webminix",
+    desc: [
+      "Reduced infrastructure costs by 22% by migrating services to AWS EC2 Auto Scaling and optimizing Lambda-based ML pipelines.",
+      "Accelerated deployment from 40 to 8 minutes via GitHub Actions and Terraform automation, removing manual release bottlenecks.",
+      "Increased uptime by containerizing backend services and orchestrating workloads with Docker and Kubernetes on AWS ECS."
+    ],
+    skills: "Python, AWS, Docker, Kubernetes, Terraform",
   },
   {
-    img: Card6Image,
-    title: "Machine Learning Intern at University of Mumbai",
-    desc:
-      "During my internship as an ML Engineer, I worked on research initiatives in weather forecasting and plant disease detection. I experimented with TensorFlow and Scikit-learn models, achieving high accuracy rates through extensive feature engineering and model evaluation. One of my key contributions was proposing a novel image augmentation technique that improved accuracy in plant disease detection tasks.",
-    skills: "PyTorch, Deep Learning, ResNet, Image Processing",
+    img: Card2Image,
+    title: "Learning Assistant at Penn State University",
+    desc: [
+      "Guided 200+ students in Data Structures, Algorithms, and Theory of Computation.",
+      "Automated grading workflows and provided personalized feedback, improving grading turnaround time.",
+      "Supported Python lab sessions and reinforced hands-on algorithmic problem-solving skills."
+    ],
+    skills: "Python, Algorithms, Automata, SQL",
   },
   {
     img: Card5Image,
     title: "Software Engineer Intern at Croblaze",
-    desc:
-      "As a Software Engineer Intern at Croblaze, I contributed to backend development by implementing secure authentication APIs with Django and MySQL. I developed JWT-based login flows with Two-Factor Authentication to serve over ten thousand users. I also refined SQL queries, reducing API response latency below 300ms.",
-    skills: "Django, REST APIs, MySQL",
+    desc: [
+      "Developed secure JWT-based authentication APIs with Django and MySQL, serving 10K+ users.",
+      "Implemented Two-Factor Authentication (2FA) and optimized SQL queries to reduce API response latency to under 300ms.",
+      "Collaborated with front-end teams to integrate REST endpoints, improving system reliability and user experience."
+    ],
+    skills: "Django, REST APIs, MySQL, Authentication",
+  },
+  {
+    img: Card6Image,
+    title: "Machine Learning Intern at University of Mumbai",
+    desc: [
+      "Researched weather forecasting and plant disease detection using TensorFlow and Scikit-learn models.",
+      "Proposed a novel image augmentation technique, improving model accuracy for plant disease classification.",
+      "Enhanced feature engineering workflows, achieving higher generalization across test data."
+    ],
+    skills: "TensorFlow, PyTorch, Deep Learning, Image Processing",
   },
 ];
 
 const ExperienceCard = ({ img, title, desc, skills }) => {
-  // Split title into [Role, Company] using " at " or " | " as delimiter
   let role = title;
   let company = "";
   if (title.includes(" at ")) {
@@ -67,7 +84,11 @@ const ExperienceCard = ({ img, title, desc, skills }) => {
       <div className="p-6 text-neutral-800">
         <h3 className="text-xl font-semibold leading-tight">{role}</h3>
         <p className="text-sm italic mb-3">{company}</p>
-        <p className="mb-4 text-sm">{desc}</p>
+        <ul className="list-disc list-inside mb-4 text-sm space-y-2">
+          {desc.map((point, i) => (
+            <li key={i}>{point}</li>
+          ))}
+        </ul>
         <p className="text-sm font-semibold">
           <span className="font-medium">Tech Stack:</span> {skills}
         </p>
@@ -75,7 +96,6 @@ const ExperienceCard = ({ img, title, desc, skills }) => {
     </div>
   );
 };
-
 
 const Experience = () => (
   <section id="experience" className="py-16">

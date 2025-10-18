@@ -11,7 +11,7 @@ const projects = [
     title: "Emotion Simulator: Multi-Persona Response Engine",
     description:
       "Built a LangGraph-based simulation engine with 50+ emotionally diverse personas reacting to the same input. Powered by LoRA adapters and fine-grained tone control using Falcon-7B.",
-    videoUrl: "", // Loom video URL when ready
+    videoUrl: "https://www.loom.com/share/df21f43fe3654f858eb9adddffa659d4?sid=c8bad584-7be0-49d5-9a9e-6e4fd7cdacc7", // Loom video URL when ready
   },
   {
     title: "ResearchMind: AI Research Assistant",

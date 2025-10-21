@@ -17,9 +17,7 @@ const About = () => (
           Sahil Adivarekar
         </h1>
 
-        <h2 className="text-3xl lg:text-4xl font-semibold text-blue-900 mb-6">
-          Software Developer | AI/ML Engineer | Data Scientist
-        </h2>
+
 
         <div className="mt-4 text-base md:text-lg text-gray-700 leading-relaxed space-y-1">
           <p>

@@ -11,7 +11,7 @@ const projects = [
     title: "Emotion Simulator: Multi-Persona Response Engine",
     description:
       "Built a Streamlit-based agentic simulation engine with LangGraph DAGs and Groq, routing real-world prompts through 50+ AI personas to analyze cultural and emotional variance. Achieved 60% speedup via parallel persona orchestration and monitored coherence using semantic and tone classifiers.",
-    videoUrl: "https://www.loom.com/embed/df21f43fe3654f858eb9adddffa659d4?sid=b43f7bcb-d85f-41f0-8da2-d8213481f1bb", // Loom video URL when ready
+    videoUrl: "https://www.loom.com/embed/df21f43fe3654f858eb9adddffa659d4?sid=b43f7bcb-d85f-41f0-8da2-d8213481f1bb",
   },
   {
     title: "ResearchMind: AI Research Assistant",
@@ -24,19 +24,19 @@ const projects = [
     title: "Tech Blog Summarizer",
     description:
       "Built a LangChain + Django web app that summarizes any tech blog or research article using FLAN-T5. Supports URL scraping, semantic chunking, and section-wise Q&A with LLMs.",
-    videoUrl: "", // Loom video URL when ready
+    videoUrl: "",
   },
   {
     title: "InterviewKit+: AI-Powered Mock Interview Simulator",
     description:
       "Full-stack Django + React platform generating 500+ coding solutions with LangChain/OpenAI. Auto-tags problems, scores difficulty, and cuts candidate prep time by 65%.",
-    videoUrl: "", // Loom video URL when ready
+    videoUrl: "",
   },
   {
     title: "ThinkInkStories: AI Blogging & Recommendation Engine",
     description:
       "Built a Django-based blogging platform with NLP features like text summarization, paraphrasing, sentiment analysis, and personalized blog recommendations using MiniLM embeddings and ChromaDB.",
-    videoUrl: "", // Loom video URL when ready
+    videoUrl: "",
   },
 ];
 
@@ -51,19 +51,23 @@ const Projects = () => (
         {projects.map(({ title, description, videoUrl }, index) => (
           <div
             key={index}
-            className="bg-white rounded-lg shadow-lg overflow-hidden"
+            className="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col"
           >
-            <div className="p-6 text-neutral-800 h-full flex flex-col">
-              <div className="min-h-[80px] flex flex-col justify-end">
+            <div className="p-6 text-neutral-800 flex flex-col flex-grow">
+              {/* Header */}
+              <div className="min-h-[80px]">
                 <h3 className="text-xl font-semibold mb-2 leading-snug">
                   {title}
                 </h3>
                 <div className="w-full h-px bg-gray-300 mb-4" />
               </div>
+
+              {/* Description */}
               <p className="mb-4">{description}</p>
 
+              {/* Video (aligned to bottom) */}
               {videoUrl && (
-                <div className="aspect-video">
+                <div className="mt-auto aspect-video">
                   <iframe
                     src={videoUrl}
                     frameBorder="0"

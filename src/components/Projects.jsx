@@ -5,7 +5,7 @@ const projects = [
     title: "Chinese Mom Simulator: Emotionally Tuned Persona Agent",
     description:
       "Fine-tuned Falcon-7B with LoRA adapters to simulate realistic behavior of culturally grounded Asian parent personas for behavior modeling and policy testing. Engineered 6 distinct identities with emotional traits, ensuring ethical safeguards and avoiding stereotypes in generated outputs.",
-    videoUrl: "", // Loom video URL when ready
+    videoUrl: "https://www.loom.com/embed/bc364b390149412483bb4413260b7ea1", // Loom video URL when ready
   },
   {
     title: "Emotion Simulator: Multi-Persona Response Engine",

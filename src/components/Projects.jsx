@@ -29,7 +29,7 @@ const projects = [
   {
     title: "Tech Blog Summarizer",
     description:
-      "Built a LangChain + Django web app that summarizes any tech blog or research article using FLAN-T5. Supports URL scraping, semantic chunking, and section-wise Q&A with LLMs.",
+      "Built a n8n application that summarizes any tech blog using the Groq LLM models and delivers the highlight directly via Email to our inbox.",
     videoUrl: "",
   },
   {

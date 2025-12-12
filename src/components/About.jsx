@@ -39,6 +39,15 @@ const About = () => (
             eager to solve real-world problems through AI-powered software.
           </p>
         </div>
+
+        {/* ✅ Resume Download Button */}
+        <a
+          href="/Sahil_Adivarekar_Resume.pdf"
+          download
+          className="inline-block mt-8 px-6 py-3 rounded-md bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition"
+        >
+          Download Résumé
+        </a>
       </div>
 
       {/* ───── Right: Image ───── */}

@@ -17,8 +17,6 @@ const About = () => (
           Sahil Adivarekar
         </h1>
 
-
-
         <div className="mt-4 text-base md:text-lg text-gray-700 leading-relaxed space-y-1">
           <p>
             I’m a versatile engineer with a passion for building intelligent, scalable systems that blend the power of machine learning and software engineering. With a strong foundation in Python, PyTorch, TensorFlow, Hugging Face, and cloud platforms like AWS, I specialize in developing end-to-end AI solutions—from model research to deployment.
@@ -30,14 +28,6 @@ const About = () => (
             I thrive at the intersection of deep learning and full-stack engineering—designing systems that are not only innovative, but also robust and production-ready. Driven by curiosity and impact, I’m eager to solve real-world problems through AI-powered software, whether it's optimizing decision-making, enhancing user experience, or pushing the boundaries of what machines can understand.
           </p>
         </div>
-
-        {/* <a
-          href="/Sahil_Adivarekar_Resume.pdf"
-          download
-          className="inline-block mt-8 px-6 py-3 rounded-md bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition"
-        >
-          Download Résumé
-        </a> */}
       </div>
 
       {/* ───── Right: Image ───── */}

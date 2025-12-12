@@ -9,7 +9,7 @@ import Card6Image from "../assets/TSEC_exp.png";
 const experienceData = [
   {
     img: Card1Image,
-    title: "AI Systems Engineer Intern at Easley Dunn Production Inc",
+    title: "AI Engineer Intern at Easley Dunn Production Inc",
     desc: [
       "Enhanced gameplay realism by 35% through a fuzzy logic system in Unity that dynamically prioritized AI maneuvers (juke, spin, stiff-arm) based on in-game context.",
       "Analyzed gameplay data to calibrate AI difficulty curves, improving responsiveness and creating adaptive player challenges.",
@@ -19,7 +19,7 @@ const experienceData = [
   },
   {
     img: Card3Image,
-    title: "AI Engineer Intern at Penn State Smeal College of Business",
+    title: "Data Scientist Intern at Penn State Smeal College of Business",
     desc: [
       "Clustered 2M+ Zulu trade records using MiniLM embeddings and automated outlier detection, reducing manual review workload by 40+ hours monthly.",
       "Built interactive Streamlit dashboards for trade anomaly visualization, improving decision-making speed by 28% and precision by 16%.",
@@ -29,13 +29,12 @@ const experienceData = [
   },
   {
     img: Card4Image,
-    title: "ML Engineer Intern at Webminix",
+    title: "AI/ML Engineer at Webminix",
     desc: [
-      "Reduced infrastructure costs by 22% by migrating services to AWS EC2 Auto Scaling and optimizing Lambda-based ML pipelines.",
-      "Accelerated deployment from 40 to 8 minutes via GitHub Actions and Terraform automation, removing manual release bottlenecks.",
-      "Increased uptime by containerizing backend services and orchestrating workloads with Docker and Kubernetes on AWS ECS."
-    ],
-    skills: "Python, AWS, Docker, Kubernetes, Terraform",
+      "Built and deployed supervised ML models (Random Forest, XGBoost, Gradient Boosting) for customer churn and lead conversion, improving accuracy by 18% and reducing churn risk by 12%.",
+      "Engineered scalable ETL pipelines processing 10M+ records to support feature engineering, PCA-based dimensionality reduction, and SHAP-driven model explainability.",
+    " Designed RAG pipelines and AI agent workflows with semantic retrieval, metadata chunking, and context-assembly orchestration.",    ],
+    skills: " Python, LangChain, LangGraph, FAISS, AWS, Docker",
   },
   {
     img: Card2Image,

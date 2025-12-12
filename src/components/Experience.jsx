@@ -1,3 +1,4 @@
+import React from "react";
 import Card1Image from "../assets/EasleyDunn_exp.png";
 import Card2Image from "../assets/PSU_TA.png";
 import Card3Image from "../assets/PSU_RA.png";

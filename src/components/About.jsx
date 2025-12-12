@@ -1,5 +1,3 @@
-import { ABOUT_CONTENT }
-
 import profilePic from "../assets/SahilProfile.jpg";
 
 const About = () => (

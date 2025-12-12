@@ -1,4 +1,3 @@
-import React from "react";
 import Card1Image from "../assets/EasleyDunn_exp.png";
 import Card2Image from "../assets/PSU_TA.png";
 import Card3Image from "../assets/PSU_RA.png";
@@ -33,9 +32,9 @@ const experienceData = [
     desc: [
       "Built and deployed supervised ML models (Random Forest, XGBoost, Gradient Boosting) for customer churn and lead conversion, improving accuracy by 18% and reducing churn risk by 12%.",
       "Engineered scalable ETL pipelines processing 10M+ records to support feature engineering, PCA-based dimensionality reduction, and SHAP-driven model explainability.",
-      "Led cloud and DevOps optimization by migrating services to AWS EC2 Auto Scaling and Lambda, reducing infrastructure costs by 22% and cutting deployment time from 40 to under 8 minutes using GitHub Actions and Terraform."
+      "Designed RAG pipelines and AI agent workflows with semantic retrieval, metadata chunking, and context-assembly orchestration"
     ],
-    skills: "Python, AWS (EC2, Lambda, ECS), Docker, Kubernetes, Terraform, GitHub Actions",
+    skills: " Python, LangChain, LangGraph, FAISS, Docker, AWS (EC2, Lambda, ECS), GitHub Actions",
   },
   {
     img: Card2Image,
@@ -68,3 +67,5 @@ const experienceData = [
     skills: "TensorFlow, PyTorch, Deep Learning, Image Processing",
   },
 ];
+
+export default experienceData;

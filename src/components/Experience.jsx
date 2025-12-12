@@ -19,7 +19,7 @@ const experienceData = [
   },
   {
     img: Card3Image,
-    title: "AI Engineer at Penn State Smeal College of Business",
+    title: "Data Scientist Intern at Penn State Smeal College of Business",
     desc: [
       "Clustered 2M+ Zulu trade records using MiniLM embeddings and automated outlier detection, reducing manual review workload by 40+ hours monthly.",
       "Built interactive Streamlit dashboards for trade anomaly visualization, improving decision-making speed by 28% and precision by 16%.",

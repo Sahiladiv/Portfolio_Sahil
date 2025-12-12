@@ -31,13 +31,13 @@ const About = () => (
           </p>
         </div>
 
-        <a
+        {/* <a
           href="/Sahil_Adivarekar_Resume.pdf"
           download
           className="inline-block mt-8 px-6 py-3 rounded-md bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition"
         >
           Download Résumé
-        </a>
+        </a> */}
       </div>
 
       {/* ───── Right: Image ───── */}

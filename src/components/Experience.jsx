@@ -1,112 +1,163 @@
-import React from "react";
+import React, { useState } from "react";
 import Card1Image from "../assets/EasleyDunn_exp.png";
-import Card2Image from "../assets/PSU_TA.png";
 import Card3Image from "../assets/PSU_RA.png";
 import Card4Image from "../assets/Webminix_exp.png";
-import Card5Image from "../assets/Croblaze_exp4.png";
-import Card6Image from "../assets/TSEC_exp.png";
 
 const experienceData = [
   {
-    img: Card1Image,
-    title: "AI Engineer Intern at Easley Dunn Production Inc",
+    img: null,
+    role: "Founding AI Engineer",
+    company: "Ultra Ops",
+    period: "Jan 2026 - Present",
     desc: [
-      "Enhanced gameplay realism by 35% through a fuzzy logic system in Unity that dynamically prioritized AI maneuvers (juke, spin, stiff-arm) based on in-game context.",
-      "Analyzed gameplay data to calibrate AI difficulty curves, improving responsiveness and creating adaptive player challenges.",
-      "Streamlined deployment by containerizing AI modules with Docker and integrating into CI/CD pipelines for scalable testing and updates."
+      "Architected the MVP for AI-driven blueprint interpretation and proposal generation for HVAC and electrical contractors.",
+      "Designed FastAPI and LangGraph based multi-agent workflows for room schedules, Manual J calculations, and cost estimation with guardrails.",
+      "Built an AI-driven CRM automation plugin for Zoho CRM, automatically capturing leads, logging conversations, and updating pipeline stages — reducing manual data entry time by 35%.",
+      "Integrated Ollama-hosted Qwen 2.5:72B, Qwen 3:32B, and Mask2Former for blueprint segmentation, extraction, and reasoning followed by human evaluation for quality assurance.",
+      "Reduced proposal generation time from days to minutes through automated extraction and AI-assisted estimation workflows.",
     ],
-    skills: "Python, C#, Unity, Game AI, Docker, CI/CD",
+    skills: ["Python", "FastAPI", "LangGraph", "Ollama", "Zoho"],
+  },
+  {
+    img: Card1Image,
+    role: "AI Systems Engineer Intern",
+    company: "Easley Dunn Production Inc",
+    period: "Jun 2025 - Dec 2025",
+    desc: [
+      "Designed the fuzzy logic based decision engine that performed real-world-like actions using context awareness.",
+      "Collaborated cross-functionally with the gameplay team to extract behavior patterns from existing games including NFL Blitz.",
+      "Implemented ScriptableObjects and Prefab-based system to use probability-driven graphs for more dynamic gameplay.",
+      "Used Gemini to analyze NFL Blitz game footage and identify gameplay parameters and behavioral gaps relevant to system design.",
+      "Led documentation for the updated decision engine, covering perception, decision evaluation, and FSM execution.",
+    ],
+    skills: ["C#", "Unity", "Gemini", "Game AI", "FSM"],
   },
   {
     img: Card3Image,
-    title: "Data Scientist Intern at Penn State Smeal College of Business",
+    role: "Data Scientist Intern",
+    company: "Smeal College of Business",
+    period: "Aug 2024 - May 2025",
     desc: [
-      "Clustered 2M+ Zulu trade records using MiniLM embeddings and automated outlier detection, reducing manual review workload by 40+ hours monthly.",
-      "Built interactive Streamlit dashboards for trade anomaly visualization, improving decision-making speed by 28% and precision by 16%.",
-      "Validated clustering with cosine similarity and entropy metrics, boosting regulator confidence in audit compliance."
+      "Engineered a system to find unusual patterns in 2 million financial trade records using sentence-level embeddings.",
+      "Built an endpoint using FastAPI for semantic retrieval on embedded transaction data, connected to a Streamlit dashboard for easier analyst review.",
+      "Automated manual reviews and saved the analyst team over 40 hours of work each month.",
+      "Simplified the decision-making process, making it 28% faster and 16% more accurate through constant feedback.",
     ],
-    skills: "Python, Transformers, MiniLM, Streamlit",
+    skills: ["Python", "FastAPI", "pgvector", "Streamlit"],
   },
   {
     img: Card4Image,
-    title: "AI/ML Engineer at Webminix",
+    role: "Software Developer Intern",
+    company: "Webminix",
+    period: "Jan 2022 - Jul 2023",
     desc: [
-      "Built and deployed supervised ML models (Random Forest, XGBoost, Gradient Boosting) for customer churn and lead conversion, improving accuracy by 18% and reducing churn risk by 12%.",
-      "Engineered scalable ETL pipelines processing 10M+ records to support feature engineering, PCA-based dimensionality reduction, and SHAP-driven model explainability.",
-    " Designed RAG pipelines and AI agent workflows with semantic retrieval, metadata chunking, and context-assembly orchestration.",    ],
-    skills: " Python, LangChain, LangGraph, FAISS, AWS, Docker",
-  },
-  {
-    img: Card2Image,
-    title: "Learning Assistant at Penn State University",
-    desc: [
-      "Guided 200+ students in Data Structures, Algorithms, and Theory of Computation.",
-      "Automated grading workflows and provided personalized feedback, improving grading turnaround time.",
-      "Supported Python lab sessions and reinforced hands-on algorithmic problem-solving skills."
+      "Contributed to building REST API endpoints for a multi-tenant application backed by PostgreSQL, improving query performance by 40%.",
+      "Rebuilt clean and scalable FastAPI services for machine learning models, improving latency from 380ms to 120ms.",
+      "Performed feature engineering and selection using correlation analysis and PCA to improve training time by 15%.",
+      "Trained ensemble models for churn and lead conversion prediction, helping reduce churn risk by 12%.",
     ],
-    skills: "Python, Algorithms, Automata, SQL",
-  },
-  {
-    img: Card5Image,
-    title: "Software Engineer Intern at Croblaze",
-    desc: [
-      "Developed secure JWT-based authentication APIs with Django and MySQL, serving 10K+ users.",
-      "Implemented Two-Factor Authentication (2FA) and optimized SQL queries to reduce API response latency to under 300ms.",
-      "Collaborated with front-end teams to integrate REST endpoints, improving system reliability and user experience."
-    ],
-    skills: "Django, REST APIs, MySQL, Authentication",
-  },
-  {
-    img: Card6Image,
-    title: "Machine Learning Intern at University of Mumbai",
-    desc: [
-      "Researched weather forecasting and plant disease detection using TensorFlow and Scikit-learn models.",
-      "Proposed a novel image augmentation technique, improving model accuracy for plant disease classification.",
-      "Enhanced feature engineering workflows, achieving higher generalization across test data."
-    ],
-    skills: "TensorFlow, PyTorch, Deep Learning, Image Processing",
+    skills: ["Python", "FastAPI", "PostgreSQL", "Scikit-learn"],
   },
 ];
 
-const ExperienceCard = ({ img, title, desc, skills }) => {
-  let role = title;
-  let company = "";
-  if (title.includes(" at ")) {
-    [role, company] = title.split(" at ");
-  } else if (title.includes(" | ")) {
-    [role, company] = title.split(" | ");
-  }
+const Experience = () => {
+  const [expanded, setExpanded] = useState(null);
 
   return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-      <img src={img} alt={title} className="h-48 w-full object-cover" />
-      <div className="p-6 text-neutral-800">
-        <h3 className="text-xl font-semibold leading-tight">{role}</h3>
-        <p className="text-sm italic mb-3">{company}</p>
-        <ul className="list-disc list-inside mb-4 text-sm space-y-2">
-          {desc.map((point, i) => (
-            <li key={i}>{point}</li>
+    <section id="experience" className="py-24 px-6">
+      <div className="max-w-6xl mx-auto">
+        <h2 className="section-heading animate-fade-up">Experience</h2>
+
+        <div className="mt-12 space-y-0">
+          {experienceData.map((exp, i) => (
+            <div
+              key={i}
+              className="group py-7 cursor-pointer animate-fade-up"
+              style={{
+                borderBottom: '1px solid var(--border-subtle)',
+                animationDelay: `${(i + 1) * 0.1}s`,
+              }}
+              onClick={() => setExpanded(expanded === i ? null : i)}
+            >
+              {/* Header row */}
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 flex-wrap">
+                    <h3 className="text-lg font-medium" style={{ color: 'var(--text-primary)' }}>
+                      {exp.role}
+                    </h3>
+                    <span
+                      className="hidden sm:inline-block w-8 h-px"
+                      style={{ background: 'var(--border)' }}
+                    />
+                    <span className="text-sm" style={{ color: 'var(--accent)' }}>
+                      {exp.company}
+                    </span>
+                  </div>
+
+                  <p className="mono mt-1.5" style={{ color: 'var(--text-muted)', fontSize: '0.65rem' }}>
+                    {exp.period}
+                  </p>
+
+                  {/* Skills pills */}
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {exp.skills.map(s => (
+                      <span
+                        key={s}
+                        className="mono px-2 py-0.5 rounded"
+                        style={{
+                          background: 'var(--accent-dim)',
+                          color: 'var(--accent)',
+                          fontSize: '0.65rem',
+                        }}
+                      >
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Toggle icon */}
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  className="flex-shrink-0 mt-1 transition-transform duration-300"
+                  style={{
+                    color: 'var(--text-muted)',
+                    transform: expanded === i ? 'rotate(45deg)' : 'rotate(0)',
+                  }}
+                >
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </div>
+
+              {/* Expanded content */}
+              <div
+                className="overflow-hidden transition-all duration-400"
+                style={{
+                  maxHeight: expanded === i ? '500px' : '0',
+                  opacity: expanded === i ? 1 : 0,
+                }}
+              >
+                <ul className="mt-5 space-y-2.5 pl-4" style={{ borderLeft: '2px solid var(--border)' }}>
+                  {exp.desc.map((point, j) => (
+                    <li key={j} className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           ))}
-        </ul>
-        <p className="text-sm font-semibold">
-          <span className="font-medium">Tech Stack:</span> {skills}
-        </p>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
-
-const Experience = () => (
-  <section id="experience" className="py-16">
-    <div className="container mx-auto px-8">
-      <h2 className="my-10 text-4xl font-serif text-center text-black">Experience</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {experienceData.map((exp, idx) => (
-          <ExperienceCard key={idx} {...exp} />
-        ))}
-      </div>
-    </div>
-  </section>
-);
 
 export default Experience;

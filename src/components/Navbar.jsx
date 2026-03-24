@@ -1,28 +1,106 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+
+const links = [
+  { label: "About", href: "#about" },
+  { label: "Education", href: "#education" },
+  { label: "Skills", href: "#technologies" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Publications", href: "#publications" },
+  { label: "Contact", href: "#contact" },
+];
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50 top-0 left-0">
-      <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-blue-800">Portfolio</h1>
-        <ul className="flex gap-6 text-sm font-medium text-gray-700">
-          <li>
-            <a href="#education" className="hover:text-blue-600 transition duration-200">Education</a>
-          </li>
-          <li>
-            <a href="#technologies" className="hover:text-blue-600 transition duration-200">Technology</a>
-          </li>
-          <li>
-            <a href="#experience" className="hover:text-blue-600 transition duration-200">Experience</a>
-          </li>
-          <li>
-            <a href="#projects" className="hover:text-blue-600 transition duration-200">Projects</a>
-          </li>
-          <li>
-            <a href="#contact" className="hover:text-blue-600 transition duration-200">Contact</a>
-          </li>
+    <nav
+      className="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+      style={{
+        background: scrolled ? 'rgba(10,10,11,0.92)' : 'transparent',
+        backdropFilter: scrolled ? 'blur(16px)' : 'none',
+        borderBottom: scrolled ? '1px solid var(--border-subtle)' : '1px solid transparent',
+      }}
+    >
+      <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a
+          href="#"
+          className="text-lg font-medium tracking-tight"
+          style={{ color: 'var(--text-primary)', fontFamily: "'Instrument Serif', serif" }}
+        >
+          SA<span style={{ color: 'var(--accent)' }}>.</span>
+        </a>
+
+        {/* Desktop links */}
+        <ul className="hidden md:flex gap-8">
+          {links.map(({ label, href }) => (
+            <li key={href}>
+              <a
+                href={href}
+                className="mono transition-colors duration-200"
+                style={{ color: 'var(--text-muted)' }}
+                onMouseEnter={e => e.target.style.color = 'var(--accent)'}
+                onMouseLeave={e => e.target.style.color = 'var(--text-muted)'}
+              >
+                {label}
+              </a>
+            </li>
+          ))}
         </ul>
+
+        {/* Mobile hamburger */}
+        <button
+          className="md:hidden flex flex-col gap-1.5"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span className="block w-6 h-px transition-all duration-300"
+            style={{
+              background: 'var(--text-primary)',
+              transform: menuOpen ? 'rotate(45deg) translateY(4px)' : 'none',
+            }}
+          />
+          <span className="block w-6 h-px transition-all duration-300"
+            style={{
+              background: 'var(--text-primary)',
+              opacity: menuOpen ? 0 : 1,
+            }}
+          />
+          <span className="block w-6 h-px transition-all duration-300"
+            style={{
+              background: 'var(--text-primary)',
+              transform: menuOpen ? 'rotate(-45deg) translateY(-4px)' : 'none',
+            }}
+          />
+        </button>
       </div>
+
+      {/* Mobile menu */}
+      {menuOpen && (
+        <div
+          className="md:hidden px-6 pb-6 flex flex-col gap-4"
+          style={{ background: 'rgba(10,10,11,0.97)' }}
+        >
+          {links.map(({ label, href }) => (
+            <a
+              key={href}
+              href={href}
+              className="mono py-2"
+              style={{ color: 'var(--text-secondary)', borderBottom: '1px solid var(--border-subtle)' }}
+              onClick={() => setMenuOpen(false)}
+            >
+              {label}
+            </a>
+          ))}
+        </div>
+      )}
     </nav>
   );
 };

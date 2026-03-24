@@ -1,25 +1,29 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import Education from "./components/Education";
+import Hero from "./components/Hero";
 import About from "./components/About";
+import Education from "./components/Education";
 import Technology from "./components/Technology";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import Publications from "./components/Publications";
 import Contact from "./components/Contact";
 
 const App = () => {
   return (
-    <>
+    <div className="min-h-screen" style={{ background: 'var(--bg-primary)' }}>
       <Navbar />
-      <div className="pt-20"> {/* Add padding to avoid overlap with fixed nav */}
+      <main>
+        <Hero />
         <About />
         <Education />
         <Technology />
         <Experience />
         <Projects />
+        <Publications />
         <Contact />
-      </div>
-    </>
+      </main>
+    </div>
   );
 };
 

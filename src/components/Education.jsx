@@ -4,56 +4,64 @@ import mumbaiLogo from "../assets/mumbai-logo.png";
 
 const EDUCATION = [
   {
-    logo: mumbaiLogo,
-    university: "University of Mumbai",
-    degree: "B.E. Computer Engineering",
-    location: "Mumbai, India",
-    dates: "Aug 2019 – May 2023",
-  },
-  {
     logo: psuLogo,
     university: "The Pennsylvania State University",
     degree: "M.S. Computer Science and Engineering",
     location: "University Park, PA",
     dates: "Aug 2023 – May 2025",
   },
+  {
+    logo: mumbaiLogo,
+    university: "University of Mumbai",
+    degree: "B.E. Computer Engineering",
+    location: "Mumbai, India",
+    dates: "Aug 2019 – May 2023",
+  },
 ];
 
-const Education = () => {
-  return (
-    <section id="education" className="py-20 bg-white px-6">
-          <h2 className="my-10 text-4xl font-serif text-black text-center mb-8">
-            Education
-          </h2>
-      <div className="relative flex justify-center items-start gap-12 px-6">
-        {/* Timeline Line */}
-        <div className="absolute top-16 left-0 right-0 h-1 bg-gray-300 z-0" />
+const Education = () => (
+  <section id="education" className="py-24 px-6">
+    <div className="max-w-6xl mx-auto">
+      <h2 className="section-heading animate-fade-up">Education</h2>
 
-        {EDUCATION.map((edu, index) => (
-          <div key={index} className="flex flex-col items-center text-center z-10">
-            {/* Date */}
-            <p className="text-sm font-semibold text-blue-700 mb-2">{edu.dates}</p>
-
-            {/* Timeline Dot with Image */}
-            <div className="relative z-10 flex justify-center items-center w-16 h-16 bg-white border-2 border-blue-500 rounded-full shadow-md mb-3">
-              <img
-                src={edu.logo}
-                alt={`${edu.university} logo`}
-                className="w-10 h-10 object-contain"
-              />
+      <div className="mt-12 space-y-0">
+        {EDUCATION.map((edu, i) => (
+          <div
+            key={i}
+            className="group grid md:grid-cols-[200px_1fr] gap-6 py-8 animate-fade-up"
+            style={{
+              borderBottom: '1px solid var(--border-subtle)',
+              animationDelay: `${(i + 1) * 0.15}s`,
+            }}
+          >
+            {/* Date + Logo */}
+            <div className="flex md:flex-col items-center md:items-start gap-4">
+              <div
+                className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
+                style={{ background: 'var(--bg-card)', border: '1px solid var(--border)' }}
+              >
+                <img src={edu.logo} alt={edu.university} className="w-9 h-9 object-contain" />
+              </div>
+              <p className="mono" style={{ color: 'var(--text-muted)' }}>{edu.dates}</p>
             </div>
 
-            {/* University & Degree */}
-            <div className="mt-2">
-              <p className="text-lg font-semibold text-gray-800">{edu.university}</p>
-              <p className="text-sm text-gray-500">{edu.location}</p>
-              <p className="text-base text-gray-700 mt-1">{edu.degree}</p>
+            {/* Details */}
+            <div>
+              <h3 className="text-xl font-medium" style={{ color: 'var(--text-primary)' }}>
+                {edu.university}
+              </h3>
+              <p className="mt-1 text-base" style={{ color: 'var(--accent)' }}>
+                {edu.degree}
+              </p>
+              <p className="mt-1 text-sm" style={{ color: 'var(--text-muted)' }}>
+                {edu.location}
+              </p>
             </div>
           </div>
         ))}
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default Education;

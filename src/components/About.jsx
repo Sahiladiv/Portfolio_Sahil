@@ -9,18 +9,18 @@ const About = () => (
         {/* Main copy — 3 cols */}
         <div className="lg:col-span-3 space-y-5 animate-fade-up animate-delay-1">
           <p className="text-lg leading-relaxed" style={{ color: 'var(--text-primary)' }}>
-            I build AI systems that ship — not just models that train.
+            I build AI systems that ship and not just models that train.
           </p>
           <p className="text-base leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
             Currently a Founding AI Engineer at Ultra Ops, where I architected the
-            end-to-end pipeline for AI-driven blueprint interpretation — from Mask2Former
+            end-to-end pipeline for AI-driven blueprint interpretation, from Mask2Former
             segmentation to LangGraph multi-agent workflows that turned days-long HVAC proposals
             into minutes. Before that, I built fuzzy logic decision engines for game AI at
             Easley Dunn, anomaly detection systems over 2M+ financial records at Penn State's
             Smeal College, and production FastAPI services at Webminix.
           </p>
           <p className="text-base leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-            My work sits at the intersection of applied ML and backend engineering — RAG pipelines,
+            My work sits at the intersection of applied ML and backend engineering, RAG pipelines,
             agentic workflows, semantic search, and the infrastructure to make them reliable at scale.
             I care about the full loop: from embeddings to API latency to the analyst dashboard
             that actually saves someone 40 hours a month.

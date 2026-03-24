@@ -45,7 +45,7 @@ const projects = [
     title: "Shadow",
     subtitle: "Local Keyboard-Driven AI Coding Co-Pilot",
     description:
-      "A lightweight desktop overlay that runs entirely locally — no browser extension, no server, no persistent UI. Listens for a global hotkey, captures on-screen context via OCR, determines intent, and generates structured responses using the OpenAI API. LLM calls run in a background worker thread with Qt signals for a responsive, thread-safe UI. Deterministic parsing separates code from explanation with graceful failure handling.",
+      "A lightweight desktop overlay that runs entirely locally and no browser extension, no server, no persistent UI. Listens for a global hotkey, captures on-screen context via OCR, determines intent, and generates structured responses using the OpenAI API. LLM calls run in a background worker thread with Qt signals for a responsive, thread-safe UI. Deterministic parsing separates code from explanation with graceful failure handling.",
     videoUrl: "https://www.loom.com/embed/65ebdc3eeb914b7895bb99fa62c9b5fc",
     tags: ["Python", "OpenAI", "OCR", "Qt", "Desktop App"],
   },

@@ -12,7 +12,7 @@ const experienceData = [
     desc: [
       "Architected the MVP for AI-driven blueprint interpretation and proposal generation for HVAC and electrical contractors.",
       "Designed FastAPI and LangGraph based multi-agent workflows for room schedules, Manual J calculations, and cost estimation with guardrails.",
-      "Built an AI-driven CRM automation plugin for Zoho CRM, automatically capturing leads, logging conversations, and updating pipeline stages — reducing manual data entry time by 35%.",
+      "Built an AI-driven CRM automation plugin for Zoho CRM, automatically capturing leads, logging conversations, and updating pipeline stages thus reducing manual data entry time by 35%.",
       "Integrated Ollama-hosted Qwen 2.5:72B, Qwen 3:32B, and Mask2Former for blueprint segmentation, extraction, and reasoning followed by human evaluation for quality assurance.",
       "Reduced proposal generation time from days to minutes through automated extraction and AI-assisted estimation workflows.",
     ],

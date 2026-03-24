@@ -1,6 +1,5 @@
 import React from "react";
 import profilePic from "../assets/SahilProfile.jpg";
-
 const Hero = () => (
   <section className="relative min-h-screen flex items-center overflow-hidden">
     {/* Subtle gradient orbs */}
@@ -24,7 +23,7 @@ const Hero = () => (
             className="text-5xl md:text-7xl font-normal leading-[1.05] tracking-tight mb-6 animate-fade-up animate-delay-2"
             style={{ fontFamily: "'Instrument Serif', serif", color: 'var(--text-primary)' }}
           >
-            Sahil<br />
+            Sahil 
             Adivarekar
           </h1>
           <p
